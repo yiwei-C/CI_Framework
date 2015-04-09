@@ -23,6 +23,6 @@ run cd cloud-conint/swingapp && mvn verify dependency:copy-dependencies
 expose 8080
 
 workdir cloud-conint/swingapp
-CMD ls
+CMD java -DPROD_MODE=true -jar target/swingapp-0.0.1-SNAPSHOT.jar
 
 
