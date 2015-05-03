@@ -78,12 +78,10 @@ We have included a vagrantfile which is used to specify the specify the OS we wo
 
 We also provide a setup.sh file which downloads and installs all of the software and tools we need for our CI process and webapp.  You will want to keep the installations for Git, Docker, Vim, and Java if you are using Java.  You can also add commands to download any other programs you may need such as Ant, Ruby, Python, Hadoop, etc.  We provide code in this file that specify pulling down, building, and running our particular Docker container with our webapp in it.  You will need to change this to specify the container you will be starting. We also include code to pull down a specified Git Repo.  All you neeed to do is simply edit it to reference your repo instead of ours.
 
-You will see there is a run.sh script used to run the Docker container once it is built.  You will be able to use this as well.  All you need to do is change the name of our Container to the name of yours.
+You will see there is a run.sh script which has 2 functions.  You can run the command "run.sh -r" which will build the local Docker image and "run.sh -s" which stop the local docker image.
 
 You will also see a Cloud.sh script that is used to run our built Docker Image in our production environment.  You will be able to reuse this as well, without making any changes.
 
-Our repo also includes a Prod_env_setup.sh script 
+We also include an app_setup.sh script which is used to change all of the other scripts for when a user wants to use a different webapp than ours.  All they simply have to do is change the warName variable and the appFolderName.  This file should always be in the same directory as the Dockerfile as this changes the necessary components of the Dockerfile to run the app.
 
-We also include an app_setup.sh script
-
-We include a Dockerfile which is used to containerize our webapp.  This is used to have all the necessary components installed in the container to run our webapp.  We alos use this to set environment variables needed to run the app as well.  While this is very personalized for the needs of our app, it is a good guideline to download and install the necessary items for you to use for your app or software.  
+We include a Dockerfile which is used to containerize our webapp.  This is used to have all the necessary components installed in the container to run our webapp.  We also use this to set environment variables needed to run the app as well.  This is automatically changed to suit your needs when you make slight modifications to the app_setup.sh script.
