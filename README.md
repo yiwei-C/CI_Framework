@@ -86,6 +86,10 @@ Set up the execution shell after the build, which is the cloud.sh provided in th
 
 ##How to Run the Pipeline as is
 
+Down the example project from
+
+    git clone https://github.com/Rootnotfound/Beta
+
 In order to run the pipeline as is, you must first download and install vagrant on your local machine.  This can be done here: http://www.vagrantup.com/downloads.html
 
 Next, you will need to clone this repository to your local machine via command line git commands.
