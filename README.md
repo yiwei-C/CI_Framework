@@ -159,4 +159,12 @@ Framework. The purpose of this project is to create a framework for the user so 
 
 Download your project repository to your local machine. Install vagrant for the new computer. Develope your application and use "vagrant up" the VM, use the run.sh script to run the application locally for testing. Git push your modified application back to GitHub repository for CI process.
 
-<>
+<b>3. What are the benefits of using Continuous Integration</b>
+
+* Allow you to test the application in your local machine before pushing to the QA and production environment
+* Easy to join the project by downloading one repository from git
+* Automatically implement QA tests and deploy to the production environment if all tests are passed
+* No need to restart the production environment for deplying the new version application
+* Shorten the development, testing and deploying time for the project from days to minutes
+* Compatible to most of the operating system
+* Allow developer to use it in many different projects
