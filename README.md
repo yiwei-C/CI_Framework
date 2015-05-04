@@ -13,7 +13,7 @@ In the local machine, vagrant VM provides a development environment for develope
 
 The modification of the application can be push to the corresponding repository and trigger the CI process of the QA environment to implement the aplication build and testings. If all the testings are passed, the CI process of the production environment will be triggered to get the newest application and deploy it automatically.
 
-## What Makes this Environment Superior to Creating Your Own Framework? ##
+## What Makes this Environment Superior to Creating Your Own Framework?
 
 Many developers within a company or institution often write and test code in a different OS than their QA and Production environments run.  This can cause many problems with programming languages that have different libraries, dictionaries, and runtime environments in one OS than another.  This creates the excuse of "Well, it worked on my machine so I don't see why it doesn't work now."  Luckily, Vagrant takes care of this issue as we are able to create portable VMs that can run the OS and installed software on our QA and Production servers.  The developer can simply download the vagrant file, say "vagrant up", "vagrant ssh" into the Vagrant VM from the command line, run the setup.sh script and the developer is easily able to run and test the app locally before pushing the QA environment.
 
@@ -21,7 +21,7 @@ While Vagrant is a great tool that solves many of the problems of developing and
 
 Another problem that Docker solves for users is that it takes away the need stop and restart your servers when launching an update to webapp.  This task can take minutes in most cases and can often lead to a website experiencing downtime.  When an app is containerized using Docker, we simply need to specify the "docker run" command in the post-build step of our Jenkins job for the updated container to run.  Since docker apps run against the container inside the server, the server will never need to be shut down and restarted.
 
-**How to Run the Pipeline as is**
+##How to Run the Pipeline as is
 
 In order to run the pipeline as is, you must first download and install vagrant on your local machine.  This can be done here: http://www.vagrantup.com/downloads.html
 
@@ -57,7 +57,7 @@ In your browser, navigate to 104.154.113.137:1234 (as this is the port it is set
 
 You will see the Webapp has successfully gone through our CI pipeline from local machine to Production with very little work done by the developer besides committing a code change to a git repo.  After your first time, you will never need to setup vagrant or any other tools on your local machine again.  You'll simply just need to make code changes and it will be build, test, and deploy automatically.
 
-**How Can You Use our Framework for your Own Use?**
+##How Can You Use our Framework for your Own Use?
 
 We provide quite a few scripts and tools within this repository that you can edit to suit your own needs.
 
@@ -75,7 +75,7 @@ We include a Dockerfile which is used to containerize our webapp.  This is used 
 
 We also provide a Dockerized Jenkins instance.  This will automatically run thanks to our automation scripts and to access the web interface you will simply need to navigate to http://your-server-ip-address:8080.  Here you will be able to create jobs that suit the needs for your project.  We include a Job Import Plugin that allows you to deploy the webapp to multiple nodes at once as well as trigger jobs that are hosted in another server, say a job completing in your QA environment triggering a job in your Production environment.
 
-**Technologies Used**
+##Technologies Used
 
 Jenkins:
 Jenkins is a Continuous Integration tool that notices when a change is made to a Git or SVN repositoty. When a change is committed Jenkins triggers Maven to build a specified webapp.  Upon a successful build, another job is triggered which will run tests against the webapp in our QA environment.  We will continue to utilize Jenkins jobs to automate this CI process from local machine to Production.
