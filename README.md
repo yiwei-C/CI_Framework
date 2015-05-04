@@ -5,7 +5,7 @@ With this repository, we are providing anyone wishing to creat a Continuous Inte
 
 ##Framwork Overview
 
-![UML Diagram](https://raw.githubusercontent.com/BU-EC500-SP15/cloud-int/master/Overview.png)
+![UML Diagram](https://raw.githubusercontent.com/BU-EC500-SP15/cloud-int/master/PICS/Overview.png)
 
 <b>Description</b>
 
@@ -67,6 +67,12 @@ You can stop the application by runing
     run.sh -s
     
 <b>7. Create your own Github repository for your own application and link the repository to Jenkins in your own QA and production repository.</b> 
+
+![UML Diagram](https://raw.githubusercontent.com/BU-EC500-SP15/cloud-int/master/PICS/p1.png)
+
+![UML Diagram](https://raw.githubusercontent.com/BU-EC500-SP15/cloud-int/master/PICS/p2.png)
+
+![UML Diagram](https://raw.githubusercontent.com/BU-EC500-SP15/cloud-int/master/PICS/p3.png)
 
 ##How to Run the Pipeline as is
 
