@@ -25,6 +25,12 @@ Another problem that Docker solves for users is that it takes away the need stop
 
 ###Prerequisites
 
+<b>1. Install vagrant</b> (https://www.vagrantup.com/downloads.html)
+
+<b>2. Clone cloud-int </b>
+
+    git clone https://github.com/BU-EC500-SP15/cloud-int.git
+
 ##How to Run the Pipeline as is
 
 In order to run the pipeline as is, you must first download and install vagrant on your local machine.  This can be done here: http://www.vagrantup.com/downloads.html
