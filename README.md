@@ -28,6 +28,8 @@ Another problem that Docker solves for users is that it takes away the need stop
 ###Prerequisites
 
 <b>1. Install vagrant</b> (https://www.vagrantup.com/downloads.html)
+      If you are new to vagrant.Here is the official guide to Vagrant 
+      https://docs.vagrantup.com/v2/
 
 <b>2. Clone cloud-int </b>
 
