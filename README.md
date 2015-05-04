@@ -4,6 +4,10 @@
 With this repository, we are providing anyone wishing to creat a Continuous Integration Pipeline whether it be for personal, educational, or industrial purposes with a pipeline to do so.  While we use specific environments and tools to create the sample webapp we are creating this for, it is easily customizable to suit anyones needs.
 
 
+##Framwork Overview##
+
+![UML Diagram](https://raw.githubusercontent.com/BU-EC500-SP15/cloud-int/master/Overview.png)
+
 **Technologies Used**
 
 Jenkins:
