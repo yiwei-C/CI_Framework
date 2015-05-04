@@ -80,6 +80,10 @@ Set up the execution shell after the build, which is the cloud.sh provided in th
 
 ![UML Diagram](https://raw.githubusercontent.com/BU-EC500-SP15/cloud-int/master/PICS/p3.png)
 
+<b>8. Push your modified application from the local machine to Github to trgger the continuous integration automatically</b>
+    
+    git push origin master
+
 ##How to Run the Pipeline as is
 
 In order to run the pipeline as is, you must first download and install vagrant on your local machine.  This can be done here: http://www.vagrantup.com/downloads.html
