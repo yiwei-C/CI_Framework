@@ -8,28 +8,11 @@ With this repository, we are providing anyone wishing to creat a Continuous Inte
 
 ![UML Diagram](https://raw.githubusercontent.com/BU-EC500-SP15/cloud-int/master/Overview.png)
 
-**Technologies Used**
+<b>Description</b>
 
-Jenkins:
-Jenkins is a Continuous Integration tool that notices when a change is made to a Git or SVN repositoty. When a change is committed Jenkins triggers Maven to build a specified webapp.  Upon a successful build, another job is triggered which will run tests against the webapp in our QA environment.  We will continue to utilize Jenkins jobs to automate this CI process from local machine to Production.
+In the local machine, vagrant VM provides a development environment for developers a environment for building and testing the application in the local machine. It allows developers to have a easy-to-setup environment setting in the local VM as the production environment in different operating systems. Users can develop their application both in host machine and the vagrant VM. 
 
-Vagrant:
-Vagrant is a tool that allows developers to create portable development environments.  The developer selects a verified Vagrant Image of the OS they desire to use.  In this case, we are using CentOS as that is what our QA and Production environments are running.  We then right a setup.sh script with the necessary commands to install the tools and software needed to run our app.
-
-Maven:
-A tool used that automatically builds Java projects utilizing a pom.xml file with specified paths and environments to build to.
-
-Docker:
-Docker is a tool used to containerize all dependencies needed to run an app or software.  We use Docker to containerize our webapp with all of the necessary Java libraries and runtime environments so the app will be run within the container as opposed to against the server.  We will also be able to create a Docker container for Jenkins to provide a portable server for anyone who wishes to use it.
-
-Google Developers Console:
-Google Developers Console (GDC) is the server we use to host our QA and production environments. GDC acts as our servers and lets us run our code in the environment in which it will be produced in as well as lets us show that we can change code on our local environment, push to a repository, and watch it update automatically in the server.
-
-CentOS:
-CentOS is the operating system we are using on GDC.
-
-Java:
-Java is the language we have used to develop a web application to test our continuous integration environment. It is also the language in wich Jenkins and Maven use to operate.
+The modification of the application can be push to the corresponding repository and trigger the CI process of the QA environment to implement the aplication build and testings. If all the testings are passed, the CI process of the production environment will be triggered to get the newest application and deploy it automatically.
 
 **What Makes this Environment Superior to Creating Your Own Framework?**
 
@@ -92,3 +75,27 @@ We also include an app_setup.sh script which is used to change all of the other 
 We include a Dockerfile which is used to containerize our webapp.  This is used to have all the necessary components installed in the container to run our webapp.  We also use this to set environment variables needed to run the app as well.  This is automatically changed to suit your needs when you make slight modifications to the app_setup.sh script.
 
 We also provide a Dockerized Jenkins instance.  This will automatically run thanks to our automation scripts and to access the web interface you will simply need to navigate to http://your-server-ip-address:8080.  Here you will be able to create jobs that suit the needs for your project.  We include a Job Import Plugin that allows you to deploy the webapp to multiple nodes at once as well as trigger jobs that are hosted in another server, say a job completing in your QA environment triggering a job in your Production environment.
+
+**Technologies Used**
+
+Jenkins:
+Jenkins is a Continuous Integration tool that notices when a change is made to a Git or SVN repositoty. When a change is committed Jenkins triggers Maven to build a specified webapp.  Upon a successful build, another job is triggered which will run tests against the webapp in our QA environment.  We will continue to utilize Jenkins jobs to automate this CI process from local machine to Production.
+
+Vagrant:
+Vagrant is a tool that allows developers to create portable development environments.  The developer selects a verified Vagrant Image of the OS they desire to use.  In this case, we are using CentOS as that is what our QA and Production environments are running.  We then right a setup.sh script with the necessary commands to install the tools and software needed to run our app.
+
+Maven:
+A tool used that automatically builds Java projects utilizing a pom.xml file with specified paths and environments to build to.
+
+Docker:
+Docker is a tool used to containerize all dependencies needed to run an app or software.  We use Docker to containerize our webapp with all of the necessary Java libraries and runtime environments so the app will be run within the container as opposed to against the server.  We will also be able to create a Docker container for Jenkins to provide a portable server for anyone who wishes to use it.
+
+Google Developers Console:
+Google Developers Console (GDC) is the server we use to host our QA and production environments. GDC acts as our servers and lets us run our code in the environment in which it will be produced in as well as lets us show that we can change code on our local environment, push to a repository, and watch it update automatically in the server.
+
+CentOS:
+CentOS is the operating system we are using on GDC.
+
+Java:
+Java is the language we have used to develop a web application to test our continuous integration environment. It is also the language in wich Jenkins and Maven use to operate.
+
