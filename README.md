@@ -2,6 +2,8 @@
 
 With this repository, we are providing anyone wishing to creat a Continuous Integration Pipeline whether it be for personal, educational, or industrial purposes with a pipeline to do so.  While we use specific environments and tools to create the sample webapp we are creating this for, it is easily customizable to suit anyones needs.
 
+Demo Video: (https://www.youtube.com/watch?v=spJOGnc_B1Q)
+
 
 ##Framwork Overview
 
@@ -147,3 +149,14 @@ CentOS is the operating system we are using on GDC.
 Java:
 Java is the language we have used to develop a web application to test our continuous integration environment. It is also the language in wich Jenkins and Maven use to operate.
 
+##FAQ 
+
+<b>1. Is this a platform or framework?</b>
+
+Framework. The purpose of this project is to create a framework for the user so that they can easily setup the CI process for their own application and the development environment in their local machine.
+
+<b>2. What should I do to take part in an existing project with this CI process></b>
+
+Download your project repository to your local machine. Install vagrant for the new computer. Develope your application and use "vagrant up" the VM, use the run.sh script to run the application locally for testing. Git push your modified application back to GitHub repository for CI process.
+
+<>
