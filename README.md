@@ -14,7 +14,7 @@ In the local machine, vagrant VM provides a development environment for develope
 
 The modification of the application can be push to the corresponding repository and trigger the CI process of the QA environment to implement the aplication build and testings. If all the testings are passed, the CI process of the production environment will be triggered to get the newest application and deploy it automatically.
 
-**What Makes this Environment Superior to Creating Your Own Framework?**
+## What Makes this Environment Superior to Creating Your Own Framework? ##
 
 Many developers within a company or institution often write and test code in a different OS than their QA and Production environments run.  This can cause many problems with programming languages that have different libraries, dictionaries, and runtime environments in one OS than another.  This creates the excuse of "Well, it worked on my machine so I don't see why it doesn't work now."  Luckily, Vagrant takes care of this issue as we are able to create portable VMs that can run the OS and installed software on our QA and Production servers.  The developer can simply download the vagrant file, say "vagrant up", "vagrant ssh" into the Vagrant VM from the command line, run the setup.sh script and the developer is easily able to run and test the app locally before pushing the QA environment.
 
