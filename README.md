@@ -21,6 +21,10 @@ While Vagrant is a great tool that solves many of the problems of developing and
 
 Another problem that Docker solves for users is that it takes away the need stop and restart your servers when launching an update to webapp.  This task can take minutes in most cases and can often lead to a website experiencing downtime.  When an app is containerized using Docker, we simply need to specify the "docker run" command in the post-build step of our Jenkins job for the updated container to run.  Since docker apps run against the container inside the server, the server will never need to be shut down and restarted.
 
+##How Can You Use our Framework for your Own Use?
+
+###Prerequisites
+
 ##How to Run the Pipeline as is
 
 In order to run the pipeline as is, you must first download and install vagrant on your local machine.  This can be done here: http://www.vagrantup.com/downloads.html
@@ -56,24 +60,6 @@ Once you see this build succeed, you can go to the tab with the Jenkins Web UI f
 In your browser, navigate to 104.154.113.137:1234 (as this is the port it is set to deploy to).
 
 You will see the Webapp has successfully gone through our CI pipeline from local machine to Production with very little work done by the developer besides committing a code change to a git repo.  After your first time, you will never need to setup vagrant or any other tools on your local machine again.  You'll simply just need to make code changes and it will be build, test, and deploy automatically.
-
-##How Can You Use our Framework for your Own Use?
-
-We provide quite a few scripts and tools within this repository that you can edit to suit your own needs.
-
-We have included a vagrantfile which is used to specify the specify the OS we would like, which is CentOS.  We made no changes to this file besides naming the box centos7.0.  You can find other Vagrant boxes here: https://atlas.hashicorp.com/boxes/search with the Vagrant file for your desired OS or use ours if you would like to use Centos.
-
-We also provide a setup.sh file which downloads and installs all of the software and tools we need for our CI process and webapp.  You will want to keep the installations for Git, Docker, Vim, and Java if you are using Java.  You can also add commands to download any other programs you may need such as Ant, Ruby, Python, Hadoop, etc.  We provide code in this file that specify pulling down, building, and running our particular Docker container with our webapp in it.  You will need to change this to specify the container you will be starting. We also include code to pull down a specified Git Repo.  All you neeed to do is simply edit it to reference your repo instead of ours.
-
-You will see there is a run.sh script which has 2 functions.  You can run the command "run.sh -r" which will build the local Docker image and "run.sh -s" which stop the local docker image.
-
-You will also see a Cloud.sh script that is used to run our built Docker Image in our production environment.  You will be able to reuse this as well, without making any changes.
-
-We also include an app_setup.sh script which is used to change all of the other scripts for when a user wants to use a different webapp than ours.  All they simply have to do is change the warName variable and the appFolderName.  This file should always be in the same directory as the Dockerfile as this changes the necessary components of the Dockerfile to run the app.
-
-We include a Dockerfile which is used to containerize our webapp.  This is used to have all the necessary components installed in the container to run our webapp.  We also use this to set environment variables needed to run the app as well.  This is automatically changed to suit your needs when you make slight modifications to the app_setup.sh script.
-
-We also provide a Dockerized Jenkins instance.  This will automatically run thanks to our automation scripts and to access the web interface you will simply need to navigate to http://your-server-ip-address:8080.  Here you will be able to create jobs that suit the needs for your project.  We include a Job Import Plugin that allows you to deploy the webapp to multiple nodes at once as well as trigger jobs that are hosted in another server, say a job completing in your QA environment triggering a job in your Production environment.
 
 ##Technologies Used
 
