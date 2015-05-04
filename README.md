@@ -68,9 +68,15 @@ You can stop the application by runing
     
 <b>7. Create your own Github repository for your own application and link the repository to Jenkins in your own QA and production repository.</b> 
 
+Link your Github repository:
+
 ![UML Diagram](https://raw.githubusercontent.com/BU-EC500-SP15/cloud-int/master/PICS/p1.png)
 
+Set up the build trigger and give the correct repository for the ROOT POM
+
 ![UML Diagram](https://raw.githubusercontent.com/BU-EC500-SP15/cloud-int/master/PICS/p2.png)
+
+Set up the execution shell after the build, which is the cloud.sh provided in the framework
 
 ![UML Diagram](https://raw.githubusercontent.com/BU-EC500-SP15/cloud-int/master/PICS/p3.png)
 
