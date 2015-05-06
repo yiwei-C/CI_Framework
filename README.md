@@ -92,7 +92,7 @@ Set up the execution shell after the build, which is the cloud.sh provided in th
 
 ##How to Run the Pipeline as is
 
-Down the example project from
+Down the sample project from
 
     git clone https://github.com/Rootnotfound/Beta
 
