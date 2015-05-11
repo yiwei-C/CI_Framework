@@ -1,4 +1,6 @@
 #!/bin/bash
+
+#Matainer: Yiwei Chen
 ImageName="webapp"
 hostIP=8080
 containerName="myapp"
