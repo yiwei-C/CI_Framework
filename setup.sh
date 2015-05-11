@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Matainer: Yiwei Chen
 #Git_directory="https://github.com/qihongxu/ninja-sample.git"
 
 echo "Running vagrant configuration script"
