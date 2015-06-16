@@ -159,7 +159,7 @@ Java is the language we have used to develop a web application to test our conti
 
 Framework. The purpose of this project is to create a framework for the user so that they can easily setup the CI process for their own application and the development environment in their local machine.
 
-<b>2. What should I do to take part in an existing project with this CI process></b>
+<b>2. What should I do to take part in an existing project with this CI process</b>
 
 Download your project repository to your local machine. Install vagrant for the new computer. Develope your application and use "vagrant up" the VM, use the run.sh script to run the application locally for testing. Git push your modified application back to GitHub repository for CI process.
 
