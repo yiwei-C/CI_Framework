@@ -73,7 +73,8 @@ You can stop the application by runing
     run.sh -s
     
 <b>7. Install Jenkins in your cloud server and install Jenkins Plugins.
-      Go to "Manage Jenkins" -> Manage Plugins
+
+Under ‘Manage Jenkins’ -> ‘Manage Plugins’, select and install both Github and Git plugins. Restart to finish the installation.
     
 <b>8. Create your own Github repository for your own application and link the repository to Jenkins in your own QA and production repository.</b> 
 
