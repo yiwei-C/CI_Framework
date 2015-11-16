@@ -72,7 +72,10 @@ You can stop the application by runing
 
     run.sh -s
     
-<b>7. Create your own Github repository for your own application and link the repository to Jenkins in your own QA and production repository.</b> 
+<b>7. Install Jenkins in your cloud server and install Jenkins Plugins.
+      Go to "Manage Jenkins" -> Manage Plugins
+    
+<b>8. Create your own Github repository for your own application and link the repository to Jenkins in your own QA and production repository.</b> 
 
 Link your Github repository:
 
@@ -86,7 +89,7 @@ Set up the execution shell after the build, which is the cloud.sh provided in th
 
 ![UML Diagram](https://raw.githubusercontent.com/BU-EC500-SP15/cloud-int/master/PICS/p3.png)
 
-<b>8. Push your modified application from the local machine to Github to trgger the continuous integration automatically</b>
+<b>9. Push your modified application from the local machine to Github to trgger the continuous integration automatically</b>
     
     git push origin master
 
