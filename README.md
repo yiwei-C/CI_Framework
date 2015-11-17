@@ -72,7 +72,7 @@ You can stop the application by runing
 
     run.sh -s
     
-<b>7. Install Jenkins in your cloud server and install Jenkins Plugins.
+<b>7. Install Jenkins in your cloud server and install Jenkins Plugins.</b>
 
 Under ‘Manage Jenkins’ -> ‘Manage Plugins’, select and install both Github and Git plugins. Restart to finish the installation.
 
