@@ -18,6 +18,7 @@ Vagrant.configure(2) do |config|
   #config.vm.box_url = BOX_URI
   config.ssh.username = "vagrant"
   config.ssh.password = "vagrant"
+  config.ssh.insert_key = 'true'
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -51,9 +52,9 @@ Vagrant.configure(2) do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider "virtualbox" do |vb|
+   config.vm.provider "virtualbox" do |vb|
   #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
+     vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
   #   vb.memory = "1024"
@@ -77,9 +78,5 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get install -y apache2
   # SHELL
   config.vm.provision "shell", path: "setup.sh"
-
-  #config.vm.provider "virtualbox" do |vb|
-  #  vb.gui = true
-  #  end
 
 end
